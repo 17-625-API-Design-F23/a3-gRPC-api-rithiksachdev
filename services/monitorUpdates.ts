@@ -64,6 +64,7 @@ async function fetchScore(entityId: number, entityType: 'post' | 'comment'): Pro
             });
     }
   });
+  
 
 }
 
