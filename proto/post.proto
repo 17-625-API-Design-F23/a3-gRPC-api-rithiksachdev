@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package reddit;
+
+import "user.proto";
+import "subreddit.proto";
+
+enum PostState {
+  NORMAL = 0;
+  LOCKED = 1;
+  HIDDEN = 2;
+}
+
+message Post {
+  int32 postId = 1;
+  string title = 2;
+  string text = 3;
+  oneof media {
+    string video_url = 4;
+    string image_url = 5;
+  }
+  int32 score = 6;
+  PostState state = 7;
+  string publication_date = 8; // Consider using google.protobuf.Timestamp
+  string author_id = 9;
+  string subreddit_id = 10; // ID of the Subreddit this post belongs to
+}

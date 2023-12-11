@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package reddit;
+
+import "user.proto";
+import "post.proto";
+
+enum CommentState {
+  NORMAL = 0;
+  HIDDEN = 1;
+}
+
+message Comment {
+  int32 commentId =1;
+  string text = 2;
+  string author_id = 3;
+  int32 score = 4;
+  CommentState state = 5;
+  string publication_date = 6; // Consider using google.protobuf.Timestamp
+  oneof parent_id { // ID of the parent Post or Comment
+    int32 p_post_id = 7; 
+    int32 p_commentId = 8;
+  }
+  bool hasReplies = 9;
+}
