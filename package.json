@@ -5,8 +5,8 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node --loader ts-node/esm ./server.ts",
-    "client": "node --loader ts-node/esm ./client.ts",
+    "start": "node --loader ts-node/esm ./services/server.ts",
+    "client": "node --loader ts-node/esm ./client/client.ts",
     "test": "jest --coverage",
     "compile": "tsc",
     "dev": "nodemon --exec ts-node ./Component3/server.ts",

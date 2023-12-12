@@ -1,9 +1,9 @@
 import * as grpc from '@grpc/grpc-js';
 import * as protoLoader from '@grpc/proto-loader'
-import {ProtoGrpcType} from './proto-auto-gen/reddit.ts'
-import { RetrievePostRequest } from './proto-auto-gen/reddit/RetrievePostRequest.ts';
-import { RetrieveTopCommentsRequest } from './proto-auto-gen/reddit/RetrieveTopCommentsRequest.ts';
-import { ExpandCommentBranchRequest } from './proto-auto-gen/reddit/ExpandCommentBranchRequest.ts';
+import {ProtoGrpcType} from '../proto-auto-gen/reddit.ts'
+import { RetrievePostRequest } from '../proto-auto-gen/reddit/RetrievePostRequest.ts';
+import { RetrieveTopCommentsRequest } from '../proto-auto-gen/reddit/RetrieveTopCommentsRequest.ts';
+import { ExpandCommentBranchRequest } from '../proto-auto-gen/reddit/ExpandCommentBranchRequest.ts';
 
 
 const PROTO_PATH = './proto/reddit.proto';
