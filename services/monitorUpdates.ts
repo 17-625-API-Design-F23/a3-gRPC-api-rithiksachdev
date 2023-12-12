@@ -53,6 +53,7 @@ async function fetchScore(entityId: number, entityType: 'post' | 'comment'): Pro
         // debug point
         //console.log(row)
         resolve(row ? row.score : 0);
+        
         });
     } else {
         db.get(query, [entityId], (err, row : Comment) => {
@@ -64,7 +65,7 @@ async function fetchScore(entityId: number, entityType: 'post' | 'comment'): Pro
             });
     }
   });
-  
+
 
 }
 
