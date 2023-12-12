@@ -18,7 +18,7 @@ async function createPostInDatabase(postData: PostType): Promise<number> {
       postData.videoUrl || null, 
       postData.imageUrl || null, 
       postData.score || 0, 
-      postData.state || 0, 
+      postData.state, 
       postData.publicationDate || null, 
       postData.authorId || null, 
       postData.subredditId || null

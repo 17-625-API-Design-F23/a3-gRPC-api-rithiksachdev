@@ -94,6 +94,11 @@ message RetrieveTopCommentsResponse {
     repeated Comment comments = 1;
 }
 
+message RetrieveTopCommentsFromCommentRequest {
+    int32 commentId = 1;
+    int32 n = 2;
+}
+
 message ExpandCommentBranchRequest {
     int32 commentId = 1;
     int32 n = 2;

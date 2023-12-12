@@ -24,6 +24,7 @@ export interface ProtoGrpcType {
     RedditService: SubtypeConstructor<typeof grpc.Client, _reddit_RedditServiceClient> & { service: _reddit_RedditServiceDefinition }
     RetrievePostRequest: MessageTypeDefinition
     RetrievePostResponse: MessageTypeDefinition
+    RetrieveTopCommentsFromCommentRequest: MessageTypeDefinition
     RetrieveTopCommentsRequest: MessageTypeDefinition
     RetrieveTopCommentsResponse: MessageTypeDefinition
     Subreddit: MessageTypeDefinition
